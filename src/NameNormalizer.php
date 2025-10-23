@@ -12,7 +12,7 @@ namespace Rodrom\Onomastica;
 
 class NameNormalizer
 {
-    protected array $connectors = [
+    protected static array $connectors = [
         // SPANISH
         'de', 'del', 'el', 'la', 'las', 'los', 'y',
         // CATALAN
@@ -26,7 +26,7 @@ class NameNormalizer
         'von', 'van',
     ];
 
-    public function normalize(string $name): string
+    public static function normalize(string $name): string
     {
         $name = static::normalizeApostrophes($name);
         $name = trim(preg_replace('/\s+/', ' ', $name));
@@ -40,7 +40,7 @@ class NameNormalizer
                 return $prefix . $rest;
             }
 
-            if (in_array($word, $this->connectors, true)) {
+            if (in_array($word, static::$connectors, true)) {
                 return $word;
             }
 

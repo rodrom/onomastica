@@ -28,11 +28,10 @@ composer require rodrom/onomastica
 ```php
 use Rodrom\Onomastica\NameNormalizer;
 
-$normalizer = new NameNormalizer();
-echo $normalizer->normalize('   Ignacio   DE   loYOla ');    // "Ignacio de Loyola"
-echo $normalizer->normalize('IÑIGO López DE OÑAZ Y Loyola'); // "Iñigo López de Oñaz y Loyola"
-echo $normalizer->normalize('María DE LAS Mercedes GARCÍA Y García');  // "José Antonio García y García"
-echo $normalizer->normalize("JAUME D'ARAGó-URGELL I MONTFERRAT"); // "Jaume d’Aragó-Urgell i Montferrat"
+echo NameNormalizer::normalize('   Ignacio   DE   loYOla ');    // "Ignacio de Loyola"
+echo NameNormalizer::normalize('IÑIGO López DE OÑAZ Y Loyola'); // "Iñigo López de Oñaz y Loyola"
+echo NameNormalizer::normalize('María DE LAS Mercedes GARCÍA Y García');  // "José Antonio García y García"
+echo NameNormalizer::normalize("JAUME D'ARAGó-URGELL I MONTFERRAT"); // "Jaume d’Aragó-Urgell i Montferrat"
 ```
 
 ---
