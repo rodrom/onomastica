@@ -1,0 +1,50 @@
+{
+    "name" : "rodrom/onomastica",
+    "description" : "Library for normalization of personal names",
+    "type": "library",
+    "license" : "MIT",
+    "authors" : [
+        {
+            "name" : "rodrom",
+            "email" : "dev@rodrom.eu",
+            "role" : "Developer",
+            "homepage" : "https://github.com/rodrom"
+        }
+    ],
+    "require" : {
+        "php": ">=8.3"
+    },
+    "require-dev" : {
+        "phpunit/phpunit": "^12.0",
+        "friendsofphp/php-cs-fixer": "^3.89"
+    },
+    "autoload" : {
+        "psr-4" : {
+            "Rodrom\\Onomastica\\" : "src/"
+        }
+    },
+    "autoload-dev" : {
+        "psr-4" : {
+            "Rodrom\\Onomastica\\Tests\\" : "tests/"
+        }
+    },
+    "scripts" : {
+        "test" : "phpunit",
+        "fix" : "php-cs-fixer fix",
+        "fix:check": "php-cs-fixer fix --dry-run --diff"
+    },
+    "keywords" : [
+        "nombres propios",
+        "personal names",
+        "spanish names",
+        "nombres españoles",
+        "onomástica",
+        "rodrom"
+    ],
+    "homepage" : "https://github.com/rodrom/onomastica",
+    "support": {
+        "issues": "https://github.com/rodrom/onomastica/issues",
+        "source": "https://github.com/rodrom/onomastica",
+        "docs": "https://github.com/joan-dev/onomastica#readme"
+    }
+}
